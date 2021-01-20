@@ -1,43 +1,61 @@
 *{
-                padding: 0;
-                margin: 0;
-            }
-            body{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                 font-family: 'Poppins', sans-serif;
-                 background: #090909
-            }
-            #box{
-                width: 1000px;
-                height: 300px;
-                margin-top: 200px;
-                text-align: center;
-                font-size: 30px;
-                border-radius: 5px;
-                box-shadow: 0px 0px 10px black;
-                color: #fff;
-            }
-            input{
-                border: none;
-                border-bottom: 1px solid #fff;
-                height: 50px;
-                font-size: 20px;
-                margin-top: 50px;
-                text-align: center;
-                background: #090909;
-                color: #fff;
-            }
-            button{
-                border: 1px solid #fff;
-                color: #fff;
-                background: none;
-                height: 50px;
-                width: 300px;
-                font-size: 30px;
-                margin-top: 10px;
-            }
-            button:hover{
-                box-shadow: 0px 0px 8px #505050;
-            }
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    background: black;
+    color: #909090;
+}
+
+
+.mestre{
+    width: 1500px;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    margin-top: 300px;
+}
+
+#box{
+    width: 1200px;
+    height: 300px;
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #909090;
+}
+#functions{;
+    text-align: center;
+}
+input{
+    border: none;
+    border-bottom: 1px solid #909090;
+    color: white;
+    height: 50px;
+    width: 400px;
+    font-size: 40px;
+    margin-top: 50px;
+    text-align: center;
+    background: none;
+}
+button{
+    border: 1px solid #909090;
+    color: #909090;
+    background: none;
+    height: 50px;
+    width: 300px;
+    font-size: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+button:hover{
+    box-shadow: 0px 0px 8px #909090;
+    transition: 0.3s;
+}
+
+#tema{
+    width: 1210px;
+}

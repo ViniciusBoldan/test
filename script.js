@@ -41,6 +41,15 @@ function alerta(){
 }
 
 //trocar para tema escuro/claro
+let hora = new Date()
+let time = hora.getHours()
+
+if(time > 18 || time <5){
+         document.querySelector('head').innerHTML = '<link rel="stylesheet" href="darkStyle.css">'
+    }else{
+        document.querySelector('head').innerHTML = '<link rel="stylesheet" href="lightStyle.css">'
+    }
+
 function theme(){
 
     if(document.querySelector('head').innerHTML == '<link rel="stylesheet" href="lightStyle.css">' ){
