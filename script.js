@@ -1,53 +1,19 @@
-//escolha da função
-function esc(num){
-
-    switch (num) {
-
-        case 1:
-        console.log('Case 1 working')
-        document.getElementsByTagName('button')[0].setAttribute('onclick', "calc(document.getElementById('enter').value)");
-        document.querySelector('button').innerHTML = 'Calcular';
-        break;
-
-        case 2:
-        console.log('Case 2 working');
-        document.getElementsByTagName('button')[0].setAttribute('onclick', "parImp(document.getElementById('enter').value)");
-        document.querySelector('button').innerText = 'Par/Impar';
-        break;
-
-        case 3:
-        console.log('Case 3 working');
-        document.getElementsByTagName('button')[0].setAttribute('onclick', "counter(document.getElementById('enter').value)");
-        document.querySelector('button').innerText = 'Contar';
-        break;
-
-        case 4:
-        console.log('Case 4 working');
-        document.getElementsByTagName('button')[0].setAttribute('onclick', "convert(document.getElementById('enter').value)");
-        document.querySelector('button').innerText = 'Converter';
-        break;
-
-        case 5:
-        console.log('Case 5 working');
-        document.getElementsByTagName('button')[0].setAttribute('onclick', "linke(document.getElementById('enter').value)");
-        document.querySelector('button').innerText = 'Linkar';
-        break;
-
-        default: 
-        console.log('Define a Case');
-    }
-}
-
 //função de calcular usando eval
-function calc(){
-   let calc = eval(document.getElementById('enter').value)
-   exit.value = calc
+function calc(text){
+    document.getElementsByTagName('button')[0].setAttribute('onclick', "calc(document.getElementById('enter').value)");
+    document.querySelector('button').innerHTML = 'Calcular';
+    document.getElementById('enter').placeholder = 'Digite um Calculo'
+
+    exit.value = eval(text)
 }
 
 //função de verificar se é par ou impar
-function parImp(n){
+function parImp(text){
+    document.getElementsByTagName('button')[0].setAttribute('onclick', "parImp(document.getElementById('enter').value)");
+    document.querySelector('button').innerText = 'Par/Impar';
+    document.getElementById('enter').placeholder = 'Digite um Numero'
     
-    if(n%2==0){
+    if(text%2==0){
         exit.value = 'Numero Par'
     }else{
         exit.value = 'Numero Impar'
@@ -55,35 +21,49 @@ function parImp(n){
 }
 
 //contador de caracteres
-function counter(){
-    let text = document.getElementById('enter').value
+function counter(text){
+    document.getElementsByTagName('button')[0].setAttribute('onclick', "counter(document.getElementById('enter').value)");
+    document.querySelector('button').innerText = 'Contar';
+    document.getElementById('enter').placeholder = 'Digite Algo'
+
     exit.value = text.length
 }
 
 //converter numero para moeda
 function convert(){
+    document.getElementsByTagName('button')[0].setAttribute('onclick', "convert(document.getElementById('enter').value)");
+    document.querySelector('button').innerText = 'Converter';
+    document.getElementById('enter').placeholder = 'Digite um Valor'
+
     let text = Number(document.getElementById('enter').value)
     exit.value = text.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
 }
 
 //fazer link
-function linke(){
-    let text = document.getElementById('enter').value
+function linke(text){
+    document.getElementsByTagName('button')[0].setAttribute('onclick', "linke(document.getElementById('enter').value)");
+    document.querySelector('button').innerText = 'Linkar';
+    document.getElementById('enter').placeholder = 'Digite Algo'
+
     exit.value = `https://${text}.com`
 }
 
 
 function alerta(){
-    alert('Escolha uma função nos botoẽs ao lado. (Calcular ou Par ou Impar')
+    alert('Escolha uma função para ser feita num dos botoẽs embaixo. (Calcular, Par ou Impar etc)')
 }
 
 
 
-//trocar para tema escuro/claro
-let hora = new Date()
-let time = hora.getHours()
+//Buscar e mostrar data e hora
+let data =  new Date()
+let time = [data.getFullYear(), data.getMonth(), data.getDate(), data.getDay(), data.getHours(), data.getMinutes()]
+let dias = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sabado']
+document.getElementById('data').innerHTML = `Data-${time[0]}/ ${time[1]+1}/${time[2]}`
+document.getElementById('hora').innerHTML = `${dias[time[3]]}---${time[4]}:${time[5]}`
 
-if(time > 18 || time <5){
+//trocar para tema escuro/claro
+if(time[4] > 18 || time[4] <5){
          document.querySelector('head').innerHTML = '<link rel="stylesheet" href="darkStyle.css">'
     }else{
         document.querySelector('head').innerHTML = '<link rel="stylesheet" href="lightStyle.css">'

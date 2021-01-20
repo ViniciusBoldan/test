@@ -6,8 +6,18 @@ body{
     font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
+    text-transform: uppercase;
 }
 
+#dataHora{
+    position: absolute;
+    font-size: 30px;
+    margin-top: 50px;
+    text-align: justify;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px;
+    padding: 10px;
+}
 
 .mestre{
     width: 1500px;

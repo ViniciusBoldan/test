@@ -8,8 +8,20 @@ body{
     justify-content: center;
     background: black;
     color: #909090;
+    text-transform: uppercase;
 }
 
+#dataHora{
+    color: #909090;
+    background: none;
+    position: absolute;
+    font-size: 30px;
+    margin-top: 50px;
+    text-align: justify;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px blue;
+    padding: 10px;
+}
 
 .mestre{
     width: 1500px;
@@ -25,7 +37,7 @@ body{
     text-align: center;
     font-size: 30px;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px #909090;
+    box-shadow: 0px 0px 10px blue;
 }
 #functions{;
     text-align: center;
