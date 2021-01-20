@@ -15,6 +15,24 @@ function esc(num){
         document.querySelector('button').innerText = 'Par/Impar';
         break;
 
+        case 3:
+        console.log('Case 3 working');
+        document.getElementsByTagName('button')[0].setAttribute('onclick', "counter(document.getElementById('enter').value)");
+        document.querySelector('button').innerText = 'Contar';
+        break;
+
+        case 4:
+        console.log('Case 4 working');
+        document.getElementsByTagName('button')[0].setAttribute('onclick', "convert(document.getElementById('enter').value)");
+        document.querySelector('button').innerText = 'Converter';
+        break;
+
+        case 5:
+        console.log('Case 5 working');
+        document.getElementsByTagName('button')[0].setAttribute('onclick', "linke(document.getElementById('enter').value)");
+        document.querySelector('button').innerText = 'Linkar';
+        break;
+
         default: 
         console.log('Define a Case');
     }
@@ -36,9 +54,30 @@ function parImp(n){
     }
 }
 
+//contador de caracteres
+function counter(){
+    let text = document.getElementById('enter').value
+    exit.value = text.length
+}
+
+//converter numero para moeda
+function convert(){
+    let text = Number(document.getElementById('enter').value)
+    exit.value = text.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+}
+
+//fazer link
+function linke(){
+    let text = document.getElementById('enter').value
+    exit.value = `https://${text}.com`
+}
+
+
 function alerta(){
     alert('Escolha uma função nos botoẽs ao lado. (Calcular ou Par ou Impar')
 }
+
+
 
 //trocar para tema escuro/claro
 let hora = new Date()
